@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CK Club — Nora Nguyen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=La+Belle+Aurore&family=Lora:ital,wght@0,400;0,600;1,400&family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/main.css" />
+  <link rel="stylesheet" href="CSS/project.css" />
+</head>
+<body id="top">
+
+  <div class="top-bar" id="top-bar">
+    <nav aria-label="Site navigation">
+      <a href="index.html" data-tooltip="Home">
+        <span class="nav-label">Home</span>
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 19H9V14C9 13.7167 9.096 13.4793 9.288 13.288C9.48 13.0967 9.71733 13.0007 10 13H14C14.2833 13 14.521 13.096 14.713 13.288C14.905 13.48 15.0007 13.7173 15 14V19H18V10L12 5.5L6 10V19ZM4 19V10C4 9.68333 4.071 9.38333 4.213 9.1C4.355 8.81667 4.55067 8.58333 4.8 8.4L10.8 3.9C11.15 3.63333 11.55 3.5 12 3.5C12.45 3.5 12.85 3.63333 13.2 3.9L19.2 8.4C19.45 8.58333 19.646 8.81667 19.788 9.1C19.93 9.38333 20.0007 9.68333 20 10V19C20 19.55 19.804 20.021 19.412 20.413C19.02 20.805 18.5493 21.0007 18 21H14C13.7167 21 13.4793 20.904 13.288 20.712C13.0967 20.52 13.0007 20.2827 13 20V15H11V20C11 20.2833 10.904 20.521 10.712 20.713C10.52 20.905 10.2827 21.0007 10 21H6C5.45 21 4.97933 20.8043 4.588 20.413C4.19667 20.0217 4.00067 19.5507 4 19Z" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="#" aria-disabled="true" tabindex="-1" data-tooltip="About me">
+        <span class="nav-label">About me</span>
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5.85 17.1C6.7 16.45 7.65 15.9377 8.7 15.563C9.75 15.1883 10.85 15.0007 12 15C13.15 14.9993 14.25 15.187 15.3 15.563C16.35 15.939 17.3 16.4513 18.15 17.1C18.7333 16.4167 19.1877 15.6417 19.513 14.775C19.8383 13.9083 20.0007 12.9833 20 12C20 9.78333 19.221 7.89567 17.663 6.337C16.105 4.77833 14.2173 3.99933 12 4C9.78267 4.00067 7.895 4.78 6.337 6.338C4.779 7.896 4 9.78333 4 12C4 12.9833 4.16267 13.9083 4.488 14.775C4.81333 15.6417 5.26733 16.4167 5.85 17.1ZM9.513 11.987C8.83767 11.313 8.5 10.484 8.5 9.5C8.5 8.516 8.83767 7.68667 9.513 7.012C10.1883 6.33733 11.0173 6 12 6C12.9827 6 13.812 6.33767 14.488 7.013C15.164 7.68833 15.5013 8.51733 15.5 9.5C15.4987 10.4827 15.1613 11.312 14.488 11.988C13.8147 12.664 12.9853 13.0013 12 13C11.0147 12.9987 10.1853 12.6613 9.512 11.988M12 22C10.6167 22 9.31667 21.7373 8.1 21.212C6.88334 20.6867 5.825 19.9743 4.925 19.075C4.025 18.1757 3.31267 17.1173 2.788 15.9C2.26333 14.6827 2.00067 13.3827 2 12C1.99933 10.6173 2.262 9.31733 2.788 8.1C3.314 6.88267 4.02633 5.82433 4.925 4.925C5.82367 4.02567 6.882 3.31333 8.1 2.788C9.318 3.31333 10.618 2 12 2C13.382 2 14.682 2.26267 15.9 2.788C17.118 3.31333 18.1763 4.02567 19.075 4.925C19.9737 5.82433 20.6863 6.88267 21.213 8.1C21.7397 9.31733 22.002 10.6173 22 12C21.998 13.3827 21.7353 14.6827 21.212 15.9C20.6887 17.1173 19.9763 18.1757 19.075 19.075C18.1737 19.9743 17.1153 20.687 15.9 21.213C14.6847 21.739 13.3847 22.0013 12 22ZM14.5 19.613C15.2833 19.3543 16 18.9833 16.65 18.5C16 18.0167 15.2833 17.646 14.5 17.388C13.7167 17.13 12.8833 17.0007 12 17C11.1167 16.9993 10.2833 17.1287 9.5 17.388C8.71667 17.6473 8 18.018 7.35 18.5C8 18.9833 8.71667 19.3543 9.5 19.613C10.2833 19.8717 11.1167 20.0007 12 20C12.8833 19.9993 13.7167 19.8703 14.5 19.613ZM13.075 10.575C13.3583 10.2917 13.5 9.93333 13.5 9.5C13.5 9.06667 13.3583 8.70833 13.075 8.425C12.7917 8.14167 12.4333 8 12 8C11.5667 8 11.2083 8.14167 10.925 8.425C10.6417 8.70833 10.5 9.06667 10.5 9.5C10.5 9.93333 10.6417 10.2917 10.925 10.575C11.2083 10.8583 11.5667 11 12 11C12.4333 11 12.7917 10.8583 13.075 10.575Z" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="#" aria-disabled="true" tabindex="-1" data-tooltip="Resume">
+        <span class="nav-label">Resume</span>
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H9.2C9.41667 2.4 9.77933 1.91667 10.288 1.55C10.7967 1.18333 11.3673 1 12 1C12.6327 1 13.2037 1.18333 13.713 1.55C14.2223 1.91667 14.5847 2.4 14.8 3H19C19.55 3 20.021 3.196 20.413 3.588C20.805 3.98 21.0007 4.45067 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5ZM5 19H19V5H5V19ZM8 17H13C13.2833 17 13.521 16.904 13.713 16.712C13.905 16.52 14.0007 16.2827 14 16C13.9993 15.7173 13.9033 15.48 13.712 15.288C13.5207 15.096 13.2833 15 13 15H8C7.71667 15 7.47933 15.096 7.288 15.288C7.09667 15.48 7.00067 15.7173 7 16C6.99933 16.2827 7.09533 16.5203 7.288 16.713C7.48067 16.9057 7.718 17.0013 8 17ZM8 13H16C16.2833 13 16.521 12.904 16.713 12.712C16.905 12.52 17.0007 12.2827 17 12C16.9993 11.7173 16.9033 11.48 16.712 11.288C16.5207 11.096 16.2833 11 16 11H8C7.71667 11 7.47933 11.096 7.288 11.288C7.09667 11.48 7.00067 11.7173 7 12C6.99933 12.2827 7.09533 12.5203 7.288 12.713C7.48067 12.9057 7.718 13.0013 8 13ZM8 9H16C16.2833 9 16.521 8.904 16.713 8.712C16.905 8.52 17.0007 8.28267 17 8C16.9993 7.71733 16.9033 7.48 16.712 7.288C16.5207 7.096 16.2833 7 16 7H8C7.71667 7 7.47933 7.096 7.288 7.288C7.09667 7.48 7.00067 7.71733 7 8C6.99933 8.28267 7.09533 8.52033 7.288 8.713C7.48067 8.90567 7.718 9.00133 8 9ZM12.538 4.038C12.6793 3.896 12.75 3.71667 12.75 3.5C12.75 3.28333 12.679 3.10433 12.537 2.963C12.395 2.82167 12.216 2.75067 12 2.75C11.784 2.74933 11.605 2.82033 11.463 2.963C11.321 3.10567 11.25 3.28467 11.25 3.5C11.25 3.71533 11.321 3.89467 11.463 4.038C11.605 4.18133 11.784 4.252 12 4.25C12.216 4.248 12.3953 4.178 12.538 4.038Z" fill="currentColor"/>
+        </svg>
+      </a>
+    </nav>
+  </div>
+
+
+  <div class="page-layout">
+
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar" aria-label="Page sections">
+      <a href="index.html" class="back-link">← Work</a>
+      <nav class="section-nav" aria-label="Case study sections">
+        <a href="#overview">Overview</a>
+        <a href="#my-role">My role</a>
+        <a href="#problem">The Problem</a>
+        <a href="#research">Research</a>
+        <a href="#findings">Key Findings</a>
+        <a href="#reflection">Reflection</a>
+      </nav>
+      <a href="#top" class="back-top">↑ Back to top</a>
+    </aside>
+
+    <!-- ── Main content ── -->
+    <main class="content">
+
+      <!-- Overview -->
+      <section>
+        <h1 class="hero-title">CK Club — Redesigning Circle K's Loyalty App to Reduce User Drop-off</h1>
+
+        <div class="meta-grid">
+          <div>
+            <div class="meta-label">Timeline</div>
+            <div class="meta-value">Aug 2023</div>
+          </div>
+          <div>
+            <div class="meta-label">Type</div>
+            <div class="meta-value">Mobile App<br>Loyalty Program<br>Hypothesis case</div>
+          </div>
+          <div>
+            <div class="meta-label">Tools</div>
+            <div class="meta-value">Figma<br>Miro</div>
+          </div>
+          <div>
+            <div class="meta-label">Deliverables</div>
+            <div class="meta-value">Redesigned Flows<br>IA Restructure<br>Prototype</div>
+          </div>
+        </div>
+      </section>
+
+      <video autoplay muted loop playsinline class="section-image" width="880" height="auto">
+        <source src="Elements/slide_vid.mp4" type="video/mp4">
+        Your browser doesn't support HTML5 video.
+      </video>
+
+      <!-- Overview -->
+      <section id="overview" class="case-section">
+        <div class="section-label">Overview</div>
+        <h2 class="section-heading">What's with CK Club?</h2>
+        <div class="section-body">
+          <p>CK Club is a loyalty app by Circle K, a famous convenience store chain in Vietnam. With the appearance of several convenience chains (GS25, Family Mart, Seven-Eleven,.... customer retention is more challenging than ever, the company wants some changes to improve the situation.</p>
+        </div>
+          <div class="method-item" style="margin-top:28px; border: 1px solid #c9c9c9; box-shadow: none; padding: 12px 12px;">
+            <div class="method-name" style="font-weight:500;color: #6d7784;">
+              Read more about CK Club app
+              <svg class="method-icon" width="11" height="11" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M19 12.998H13V18.998H11V12.998H5V10.998H11V4.99805H13V10.998H19V12.998Z" fill="#a8a8a8"/>
+              </svg>
+            </div>
+            <div class="method-desc"><strong>Target customers</strong> <br>Individual customers that visit Circle K regularly. Customers who care about deals and promotions, those who are sentisive to price and want to make the most from their purchases. <br>
+            <strong>App domain</strong> <br> Loyalty, Commercial <br>
+              <strong>Customers use app for:</strong> <br> Track loyalty points, track purchase history, find store locations, find discount deals <br>
+            <strong>Company uses app for</strong> <br> Keep loyal customers, increase impression for partner's campaigns
+            </div>
+          </div>
+
+        <h2 class="section-heading">Hypothesis problem to solve</h2>
+        <div class="section-body">
+          <p>To learn how a loyalty app work and to avoid redesigning UI that did not based on any real context, I came up with a hypothesis problem to work on.</p>
+          <h2 class="quote">"By Aug 2023, after a free-drinks giveaway marketing campaign, CK Club doubled the number of new user comparing to the previous month. However after 2 weeks, the number of Active Users reduced by 80%, making a great loss on marketing investment."</h2> 
+          <p>As a product designer working on this app, my job was to identify the problem and propose the solution to keep users from leaving app early.</p>
+          <div class="callout">
+            <svg class="callout-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 12H4M12 3V4M20 12H21M5.6 5.6L6.3 6.3M18.4 5.6L17.7 6.3M9.7 17H14.3M9 16C8.16047 15.3704 7.54033 14.4925 7.22743 13.4908C6.91453 12.4892 6.92473 11.4144 7.25658 10.4189C7.58844 9.4233 8.22512 8.55739 9.07645 7.94379C9.92778 7.33019 10.9506 7 12 7C13.0494 7 14.0722 7.33019 14.9236 7.94379C15.7749 8.55739 16.4116 9.4233 16.7434 10.4189C17.0753 11.4144 17.0855 12.4892 16.7726 13.4908C16.4597 14.4925 15.8395 15.3704 15 16C14.6096 16.3865 14.3156 16.8594 14.1419 17.3806C13.9681 17.9018 13.9195 18.4566 14 19C14 19.5304 13.7893 20.0391 13.4142 20.4142C13.0391 20.7893 12.5304 21 12 21C11.4696 21 10.9609 20.7893 10.5858 20.4142C10.2107 20.0391 10 19.5304 10 19C10.0805 18.4566 10.0319 17.9018 9.85813 17.3806C9.6844 16.8594 9.39043 16.3865 9 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            This project focused on solving a hypothesis problem that I assume might happen to a loyalty app. This project is only for the purpose of learning, and was not a job for Circle K.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- My Role -->
+      <section id="my-role" class="case-section">
+        <div class="section-label">My role</div>
+        <h2 class="section-heading">What I do in this project</h2>
+        <div class="section-body">
+          <p>I played the role of a solo product designer, and tried to do the full process from research to final solution. With the problem stated above, I reframed the challenges and the scope of the project. These are the summary of the steps I perfomed in this project.</p>
+        <!-- Process Flow Diagram -->
+        <div class="process-flow-section" style="margin-top: 64px;">
+          <div class="process-container">
+            <div class="process-flow">
+              <div class="process-step">
+                <div class="step-circle">1</div>
+                <div class="step-label">Reframe the problem</div>
+              </div>
+
+              <div class="process-step">
+                <div class="step-circle">2</div>
+                <div class="step-label">Assumption</div>
+              </div>
+
+              <div class="process-step">
+                <div class="step-circle">3</div>
+                <div class="step-label">Research</div>
+              </div>
+
+              <div class="process-step">
+                <div class="step-circle">4</div>
+                <div class="step-label">Verify assumption</div>
+              </div>
+
+              <div class="process-step">
+                <div class="step-circle">5</div>
+                <div class="step-label">Create UI solution</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- The Challenge -->
+      <section id="problem" class="case-section">
+        <div class="section-label">The problems</div>
+        <h2 class="section-heading">High install rate and high churn-rate.</h2>
+        <div class="section-body">
+          <p>To clearly understand the problem, my job was to find the answer to the research question:</p>
+          <h2 class="quote">"What makes user come to use app, and what stop them from keep using app?"</h2>
+        </div>
+
+          <div class="finding">
+            <div class="finding-title">What make users come</div>
+            <div class="finding-body">The stamp-for-reward program was the only feature that kept users engaged — it had a clear, concrete goal. In contrast, <strong>7 of 7 users did not know what the membership tier system was for</strong> or what benefits their tier offered.</div>
+            <blockquote>"I open the QR to collect stamps and check how many I've earned. When I hit 5, I get a free drink — the cashier handles the redemption automatically."</blockquote>
+            <div class="finding-suggestion">→ Restructure the home screen to surface membership status, QR code, and next-reward progress immediately on open.</div>
+          </div>
+
+        <div class="method-list" style="margin-top: 28px;">
+          <div class="method-item">
+            <div class="method-name">
+              <svg class="method-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M19 12.998H13V18.998H11V12.998H5V10.998H11V4.99805H13V10.998H19V12.998Z" fill="currentColor"/>
+              </svg>
+              80% drop-off after using app
+            </div>
+            <div class="method-desc">Users downloaded app using extrisic motivation, but had low internal motivation to continue using app.</div>
+          </div>
+          <div class="method-item">
+            <div class="method-name">
+              <svg class="method-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M19 12.998H13V18.998H11V12.998H5V10.998H11V4.99805H13V10.998H19V12.998Z" fill="currentColor"/>
+              </svg>
+              Hypothesis 2
+            </div>
+            <div class="method-desc">The app's perceived value is too low for users to keep returning.</div>
+          </div>
+          <div class="method-item">
+            <div class="method-name">
+              <svg class="method-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M19 12.998H13V18.998H11V12.998H5V10.998H11V4.99805H13V10.998H19V12.998Z" fill="currentColor"/>
+              </svg>
+              Hypothesis 3
+            </div>
+            <div class="method-desc">There is not enough motivation to open the app regularly.</div>
+          </div>
+        </div>
+      <h2 class="section-heading">Project scope</h2>
+          <p>Within this project, I will only discover the problem with usability and frontend problem.</p>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Research -->
+      <section id="research" class="case-section">
+        <div class="section-label">Research</div>
+        <h2 class="section-heading">Listening before designing.</h2>
+        <div class="section-body">
+          <p>Three methods ran in parallel to understand where friction actually came from — not just where users said it came from.</p>
+        </div>
+
+        <div class="method-list">
+          <div class="method-item">
+            <div class="method-name">User Interviews — 7 participants</div>
+            <div class="method-desc">Split into current users and churned users. 5–7 min sessions at Circle K stores during evening hours. Covered motivation for downloading, current habits, feature awareness, and expectations.</div>
+          </div>
+          <div class="method-item">
+            <div class="method-name">Field Observation — 22 transactions</div>
+            <div class="method-desc">Tracked live checkout behavior at a Circle K location. Measured time, payment method, and step-by-step flow for CK Club users vs. non-users.</div>
+          </div>
+          <div class="method-item">
+            <div class="method-name">Heuristic Evaluation</div>
+            <div class="method-desc">Audited the current app against Nielsen's usability principles: visibility of system status, consistency, recognition over recall, and help/documentation.</div>
+          </div>
+        </div>
+
+        <table class="obs-table">
+          <thead>
+            <tr>
+              <th scope="col">Metric</th>
+              <th scope="col">Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>CK Club usage rate among observed transactions</td><td>22.5%</td></tr>
+            <tr><td>Avg. checkout time with CK Club</td><td>25.5 seconds</td></tr>
+            <tr><td>Avg. checkout time without CK Club</td><td>14.2 seconds</td></tr>
+            <tr><td>Payment via e-wallet/transfer (CK users)</td><td>60% (3 of 5)</td></tr>
+            <tr><td>Payment via e-wallet/transfer (non-CK users)</td><td>47% (8 of 17)</td></tr>
+          </tbody>
+        </table>
+
+        <img src="projects/images/Blueprint.jpg"
+             alt="Checkout flow blueprint from field observation at Circle K"
+             class="section-image"
+             width="880" height="495"
+             loading="lazy" />
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Key Findings -->
+      <section id="findings" class="case-section">
+        <div class="section-label">Key Findings</div>
+        <h2 class="section-heading">Three problems, all pointing at the same gap.</h2>
+        <div class="section-body">
+          <p>Users weren't disengaged — the app was actively getting in their way.</p>
+        </div>
+
+        <div style="margin-top: 32px;">
+          <div class="finding">
+            <div class="finding-number">Finding 01</div>
+            <div class="finding-title">Checkout is too slow and gives no feedback</div>
+            <div class="finding-body">5 of 7 users said the app slows them down at checkout, especially on a poor connection. Opening the app alone averaged 7.7 seconds during the queue. Users who paid by e-wallet had to switch between two apps mid-checkout. Critically, the app gives no confirmation that points were added — users had no way to verify the transaction registered.</div>
+            <div class="finding-suggestion">→ Streamline checkout. Allow points accumulation via phone number as an alternative to QR scanning.</div>
+          </div>
+
+          <div class="finding">
+            <div class="finding-number">Finding 02</div>
+            <div class="finding-title">Users don't understand what points are for</div>
+            <div class="finding-body">The stamp-for-reward program was the only feature that kept users engaged — it had a clear, concrete goal. In contrast, <strong>7 of 7 users did not know what the membership tier system was for</strong> or what benefits their tier offered.</div>
+            <blockquote>"I open the QR to collect stamps and check how many I've earned. When I hit 5, I get a free drink — the cashier handles the redemption automatically."</blockquote>
+            <div class="finding-suggestion">→ Restructure the home screen to surface membership status, QR code, and next-reward progress immediately on open.</div>
+          </div>
+
+          <div class="finding">
+            <div class="finding-number">Finding 03</div>
+            <div class="finding-title">Key features are hidden and underused</div>
+            <div class="finding-body"><strong>100% of interviewed users</strong> did not know the app had a store locator or transaction history — and assumed those features didn't exist. The app also lacks an in-app notification tab, so points updates and payment confirmations are never surfaced.</div>
+            <div class="finding-suggestion">→ Conduct card sorting to redesign the app's information architecture.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Reflection -->
+      <section id="reflection" class="case-section">
+        <div class="section-label">Reflection</div>
+        <h2 class="section-heading">The retention problem was really a trust problem.</h2>
+        <div class="section-body">
+          <p>Users weren't disengaged — they were uncertain. They didn't know if the app was working, didn't know what they were earning, and couldn't find the features that might have made it worthwhile.</p>
+          <p>The drop-off wasn't about the reward program being weak. It was about the app failing to communicate its own value at every touchpoint. Getting the checkout flow and home screen right isn't UX polish — it's the design doing what the product was built to do.</p>
+          <p>Next: usability testing on both the current app and the redesigned prototype, comparing task completion time, steps, and error rates — with focus on checkout friction and feature discovery.</p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Next Project -->
+      <section id="next-project" class="case-section">
+        <div class="section-label">Next Project</div>
+        <div class="next-project-grid">
+          <a href="lai.html" class="next-project-card">
+            <div class="next-project-img">
+              <img src="projects/images/lai1.png"
+                   alt="Fixing App Usability Problems to Improve Completion Rate"
+                   loading="lazy" />
+            </div>
+            <div class="next-project-name">Fixing App Usability Problems to Improve Completion Rate</div>
+          </a>
+          <a href="index.html" class="next-project-card">
+            <div class="next-project-img">
+              <img src="projects/images/diem.jpg"
+                   alt="A Recycling Competition App to Build Employee Engagement"
+                   loading="lazy" />
+            </div>
+            <div class="next-project-name">A Recycling Competition App to Build Employee Engagement</div>
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>Nora with my friend, Claude <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></p>
+  </footer>
+
+  <div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="" />
+  </div>
+
+  <script src="js/lightbox.js"></script>
+
+  <script>
+    /* ── Compact nav on scroll ── */
+    const topBar = document.getElementById('top-bar');
+    window.addEventListener('scroll', () => {
+      topBar.classList.toggle('scrolled', window.scrollY > 150);
+    }, { passive: true });
+
+    const sections = document.querySelectorAll('.case-section');
+    const navLinks = document.querySelectorAll('.section-nav a');
+
+    /* Smooth scroll on sidebar link click */
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    /* Active link on scroll */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.section-nav a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+
+    /* ── Method item expand/collapse ── */
+    // The card itself no longer animates or clips — only .method-desc does,
+    // between 0 and its own scrollHeight. That keeps the collapsed card at
+    // exactly padding + title height, so top/bottom padding stays even.
+    const methodItems = document.querySelectorAll('.method-item');
+    methodItems.forEach(item => {
+      const desc = item.querySelector('.method-desc');
+      if (!desc) return;
+
+      item.addEventListener('click', () => {
+        if (item.classList.contains('expanded')) {
+          // Closing: lock in the current expanded pixel height first,
+          // force a reflow, then animate down to 0. Skipping this and
+          // just removing the class would jump straight from "none" to
+          // 0 with no distance to animate, so it would just snap shut.
+          desc.style.maxHeight = desc.scrollHeight + 'px';
+          void desc.offsetHeight;
+          item.classList.remove('expanded');
+          desc.style.maxHeight = '0px';
+        } else {
+          // Opening: animate to the description's real content height.
+          item.classList.add('expanded');
+          desc.style.maxHeight = desc.scrollHeight + 'px';
+        }
+      });
+
+      desc.addEventListener('transitionend', (e) => {
+        if (e.propertyName === 'max-height' && item.classList.contains('expanded')) {
+          // Let an expanded description reflow freely (e.g. window resize,
+          // font load) instead of staying capped at the pixel value that
+          // was measured when the animation started.
+          desc.style.maxHeight = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

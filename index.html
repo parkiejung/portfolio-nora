@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nora Nguyen, Product Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=La+Belle+Aurore&family=Lora:ital,wght@0,400;0,600;1,400&family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/main.css" />
+</head>
+<body class="page-home">
+
+  <nav aria-label="Site navigation">
+    <a href="index.html" class="active">Home</a>
+    <a href="#" aria-disabled="true" tabindex="-1">About me</a>
+    <a href="#" aria-disabled="true" tabindex="-1">Resume</a>
+  </nav>
+
+  <main>
+
+    <section class="hero" aria-label="Introduction">
+
+      <div class="card-stack" tabindex="0" role="img" aria-label="Nora Nguyen">
+
+        <!-- Left: plain white card -->
+        <div class="card card-left" aria-hidden="true">
+          <img src="Elements/run_icon.svg" alt="" class="card-left-icon" />
+          <div class="card-left-header">ON MY MIND NOW</div>
+          <ul class="card-left-list">
+            <li>Personal project about photo management (personal problem inspired) </li>
+            <li>Shopify Apps</li>
+          </ul>
+        </div>
+
+        <!-- Right: blue info card -->
+        <div class="card card-right" aria-hidden="true">
+          <svg class="cake-svg" viewBox="0 0 28 28" fill="none"
+               stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <rect x="12.5" y="5" width="3" height="5" rx="1"/>
+            <path d="M14 3.5 C14 3.5 15.5 4.5 15.5 5.5 C15.5 6.3 14.8 7 14 7 C13.2 7 12.5 6.3 12.5 5.5 C12.5 4.5 14 3.5 14 3.5Z" fill="white" stroke="none"/>
+            <rect x="4" y="10" width="20" height="13" rx="3"/>
+            <line x1="4" y1="17" x2="24" y2="17"/>
+            <circle cx="9" cy="13.5" r="0.8" fill="white" stroke="none"/>
+            <circle cx="14" cy="13.5" r="0.8" fill="white" stroke="none"/>
+            <circle cx="19" cy="13.5" r="0.8" fill="white" stroke="none"/>
+          </svg>
+          <p>4 years<br>in Tech design<br>Experienced in<br>Ecommerce SAAS,<br>CRM</p>
+        </div>
+
+        <!-- Center: polaroid -->
+        <div class="card card-center" aria-hidden="true">
+          <div class="photo">
+            <img id="nora-portrait"
+                 src="Elements/pic2.jpg"
+                 alt="Nora Nguyen"
+                 width="237" height="256" />
+          </div>
+          <div class="label">Nora in Hanoi</div>
+        </div>
+
+      </div>
+
+      <div class="text-block">
+        <h1>
+          Nora, a Product Designer, who <br> <span style="color:#3BC0D8"><img src="Elements/observe-icon.svg" alt="" class="hero-icon" />observes</span> how people use digital products,
+          <span style="color:#D24E4C"><img src="Elements/question-icon.svg" alt="" class="hero-icon" />questions</span> how things can be improved, and
+          <span style="color: #D37400;"><img src="Elements/design-icon.svg" alt="" class="hero-icon" />designs</span> solutions that add values<span class="typing-cursor" aria-hidden="true"></span>
+        </h1>
+      </div>
+
+    </section>
+
+    <!-- Selected Work -->
+    <section class="works-section" aria-label="Selected work">
+
+      <div class="works-inner">
+
+        <!-- Header -->
+        <div class="works-header">
+          <h2 class="case-studies-heading">// What I've been building</h2>
+          
+        </div>
+
+        <!-- Card grid -->
+        <div class="works-grid">
+
+          <!-- Shopify Reviews -->
+          <a href="lai.html" class="work-card" data-category="enterprise">
+            <div class="work-card-img">
+              <img src="Elements/lai-main.png"
+                   alt="Shopify Reviews Import Flow usability improvement"
+                   loading="lazy" />
+            </div>
+            <div class="work-card-body">
+              <h3 class="work-card-title">Fixing App Usability Problems to Improve Completion Rate</h3>
+              <p class="work-card-desc">Identified and resolved key friction points in a Shopify reviews import flow to improve task completion.</p>
+              <div class="work-card-tags">
+                <span class="work-tag work-tag-type">SAAS</span>
+                <span class="work-tag work-tag-type">Feature Redesign</span>
+                <span class="work-tag work-tag-type">2023</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- CK Club -->
+          <a href="ck-club.html" class="work-card" data-category="consumer mobile">
+            <div class="work-card-img">
+              <img src="Elements/ck-club-main.png"
+                   alt="Circle K CK Club Loyalty App — redesigned screens"
+                   loading="lazy" />
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+              <h3 class="work-card-title">Redesign Circle K's Loyalty App to Reduce User Drop-off</h3>
+              <p class="work-card-desc">Simplified navigation and reduced friction across the loyalty flow to lift retention and daily active use.</p>
+                <span class="work-tag work-tag-type">Mobile App</span>
+                <span class="work-tag work-tag-type">Personal Project</span>
+                <span class="work-tag work-tag-type">2023</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Green Point -->
+          <a href="#" class="work-card" aria-disabled="true" data-category="consumer zerotone">
+            <div class="work-card-img">
+              <img src="projects/images/diem.jpg"
+                   alt="Diem Xanh — Recycling Competition App for employee engagement"
+                   loading="lazy" />
+              <span class="work-card-soon">Coming soon</span>
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+              <h3 class="work-card-title">A Recycling Competition App to Build Employee Engagement</h3>
+              <p class="work-card-desc">Designed a gamified recycling app from scratch to drive sustainability habits inside the workplace.</p>
+                <span class="work-tag work-tag-type">Mobile App</span>
+                <span class="work-tag work-tag-type">2022</span>
+              </div>
+            </div>
+          </a>
+
+        </div><!-- /works-grid -->
+
+      </div><!-- /works-inner -->
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>
+      Made with Nora and my friend, Claude
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+    </span>
+  </footer>
+
+  <div id="cursor-badge" aria-hidden="true">View project</div>
+
+  <script>
+    // ── Filter pills ──
+    (function () {
+      const pills = document.querySelectorAll('.filter-pill');
+      const cards = document.querySelectorAll('.work-card');
+
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          pills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+
+          const filter = pill.dataset.filter;
+          cards.forEach(card => {
+            const cats = card.dataset.category || '';
+            const show = filter === 'all' || cats.split(' ').includes(filter);
+            card.classList.toggle('hidden', !show);
+          });
+        });
+      });
+    })();
+
+    // ── Cursor badge (now just for the CK Club card) ──
+    const badge = document.getElementById('cursor-badge');
+
+    document.addEventListener('mousemove', (e) => {
+      badge.style.left = e.clientX + 'px';
+      badge.style.top  = e.clientY + 'px';
+    });
+
+    document.querySelectorAll('.work-card:not([aria-disabled])').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        badge.textContent = 'View project';
+        badge.classList.add('visible');
+      });
+      card.addEventListener('mouseleave', () => {
+        badge.classList.remove('visible');
+      });
+    });
+
+  </script>
+
+</body>
+</html>
