@@ -51,6 +51,36 @@
   align-items: start;
 }
 
+/* Align the footer's inner content with .page-layout's own CONTENT
+   column (600px, same as .content below) — not the sidebar — so the
+   footer text starts where the case study text starts, not where the
+   left-hand menu starts. 232px = sidebar (160px) + grid gap (72px);
+   264px is that same offset measured from the page edge (32px page
+   padding + 232px). Below 900px .page-layout collapses to a single
+   column (sidebar stacks above content, no more offset), so the
+   footer reverts to matching .page-layout's own edge there, same as
+   before. */
+.page-layout + site-footer .footer-inner {
+  max-width: 600px;
+  margin-left: max(264px, calc(50% - 276px));
+  margin-right: 0;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .page-layout + site-footer .footer-inner {
+    max-width: 1080px;
+    margin-left: auto;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-layout + site-footer .footer-inner {
+    padding: 0 16px;
+  }
+}
+
 /* ── Sidebar ── */
 .sidebar {
   position: sticky;
@@ -69,7 +99,6 @@
   margin-bottom: 28px;
 }
 
-.back-link:hover { color: var(--accent); }
 
 .section-nav {
   display: flex;
@@ -91,14 +120,18 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--accent);
+  opacity: 0.6;
   text-decoration: none;
   transition: color 0.2s;
   line-height: 1.5;
 }
 
-.section-nav a:hover { color: var(--accent-dark); }
-.section-nav a.active { color: var(--accent); }
+.section-nav a.active {
+  color: var(--accent);
+  opacity: 1;
+  font-size: 12px;
+}
 
 .back-top {
   display: block;
@@ -106,13 +139,12 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #C0C2D8;
+  color: var(--accent);
   text-decoration: none;
-  margin-top: 36px;
+  margin-bottom: 36px;
   transition: color 0.2s;
 }
 
-.back-top:hover { color: var(--accent); }
 
 /* ── Content ── */
 .content { min-width: 0; max-width: 600px; }
@@ -124,7 +156,7 @@
   font-weight: 400;
   letter-spacing: -0.01em;
   line-height: 1.15;
-  color: var(--accent);
+  color: var(--ink);
   max-width: 720px;
   margin-bottom: 48px;
   text-wrap: balance;
@@ -146,13 +178,13 @@
   font-weight: 600;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--ink);
   margin-bottom: 10px;
 }
 
 .meta-value {
   font-size: 13px;
-  color: var(--accent-dark);
+  color: var(--ink);
   line-height: 1.75;
 }
 
@@ -174,7 +206,7 @@ h2 {
   margin-bottom: 24px;
   letter-spacing: -0.02em;
   line-height: 1.25;
-  color: var(--accent-dark);
+  color: var(--ink);
 }
 
 .section-body {
@@ -206,7 +238,7 @@ body.page-lai .section-heading {
   font-family: var(--font-heading);
   font-size: 38px;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--ink);
   letter-spacing: -0.04em;
   line-height: 1;
   margin-bottom: 8px;
@@ -214,7 +246,7 @@ body.page-lai .section-heading {
 
 .stat-desc {
   font-size: 12.5px;
-  color: var(--muted);
+  color: var(--ink);
   line-height: 1.55;
 }
 
@@ -245,8 +277,6 @@ body.page-lai .section-heading {
     flex-wrap: wrap;
     gap: 10px 18px;
   }
-
-  .back-top { display: none; }
 
   .hero-title { font-size: 32px; }
 
@@ -323,7 +353,7 @@ body.page-lai .section-heading {
   min-width: 0;
   font-size: 14px;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--ink);
   line-height: 1.35;
 }
 
@@ -452,13 +482,13 @@ body.page-lai .section-heading {
 .callout {
   font-size: 14px;
   line-height: 1.6;
-  color: var(--accent-dark);
+  color: var(--ink);
   font-weight: 500;
 }
 
 /* ── Quote ── */
 .quote {
-  color: #7a91a9;
+  color: var(--ink);
   font-size: 14pt;
   font-family: var(--font-heading);
   font-weight: 400;
@@ -467,12 +497,6 @@ body.page-lai .section-heading {
   margin-right: 40px;
   font-style: italic;
   line-height: 1.5;
-}
-
-/* ── Highlight ── */
-.highlight {
-  border-left: 2px solid var(--accent);
-  padding-left: 24px;
 }
 
 /* ── Process Flow Diagram ── */
@@ -540,7 +564,7 @@ body.page-lai .section-heading {
 .step-label {
   font-size: 12px;
   font-weight: 400;
-  color: var(--accent-dark);
+  color: var(--ink);
   text-align: left;
   line-height: 1.2;
   max-width: 100px;
@@ -604,7 +628,7 @@ body.page-lai .section-heading {
 /* ── Fun photo carousel: continuous auto-scroll once visible ── */
 .fun-carousel-wrapper {
   position: relative;
-  height: 30vh;
+  height: 24vh;
   margin-top: 32px;
   overflow: hidden;
 }

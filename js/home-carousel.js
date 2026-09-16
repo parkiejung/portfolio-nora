@@ -1,9 +1,10 @@
-/* ── Fun photo carousel: infinite auto-scroll at a steady speed, starts
-   once it enters view. Images keep their natural aspect ratio (only height
-   is constrained to the carousel's height). */
+/* ── Home page photo carousel: infinite auto-scroll at a steady speed,
+   starts once it enters view. Images keep their natural aspect ratio (only
+   height is constrained to the carousel's height). Independent copy of the
+   fun-carousel used on lai.html, scoped to its own ids/classes. */
 (function () {
-  const wrapper = document.getElementById('fun-carousel-wrapper');
-  const track = document.getElementById('fun-carousel-track');
+  const wrapper = document.getElementById('home-carousel-wrapper');
+  const track = document.getElementById('home-carousel-track');
   if (!wrapper || !track) return;
 
   const speed = 36; // px per second, constant

@@ -8,13 +8,80 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=La+Belle+Aurore&family=Lora:ital,wght@0,400;0,600;1,400&family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="CSS/main.css" />
+  <style>
+    body.page-home .work-exp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    body.page-home .work-exp-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    body.page-home .work-exp-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    body.page-home .work-exp-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+
+    body.page-home .work-exp-date {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 640px) {
+      body.page-home .work-exp-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+    }
+
+    body.page-home .work-exp-detail-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent);
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 10px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      margin-top: 32px;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    body.page-home .work-exp-detail-btn:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+  </style>
 </head>
-<body class="page-home">
+<body class="page-home" id="top">
 
   <nav aria-label="Site navigation">
     <a href="index.html" class="active">Home</a>
-    <a href="#" aria-disabled="true" tabindex="-1">About me</a>
-    <a href="#" aria-disabled="true" tabindex="-1">Resume</a>
+    <a href="work-exp.html">Work Experience</a>
   </nav>
 
   <main>
@@ -79,8 +146,7 @@
 
         <!-- Header -->
         <div class="works-header">
-          <h2 class="case-studies-heading">// What I've been building</h2>
-          
+          <h2 class="case-studies-heading">My projects</h2>
         </div>
 
         <!-- Card grid -->
@@ -95,11 +161,10 @@
             </div>
             <div class="work-card-body">
               <h3 class="work-card-title">Fixing App Usability Problems to Improve Completion Rate</h3>
-              <p class="work-card-desc">Identified and resolved key friction points in a Shopify reviews import flow to improve task completion.</p>
+              <p class="work-card-desc">Identified and resolved key friction points, brought the CSAT score from 3.6 to 4.5, completion rate went up 46% to 90%.</p>
               <div class="work-card-tags">
                 <span class="work-tag work-tag-type">SAAS</span>
                 <span class="work-tag work-tag-type">Feature Redesign</span>
-                <span class="work-tag work-tag-type">2023</span>
               </div>
             </div>
           </a>
@@ -112,12 +177,11 @@
                    loading="lazy" />
             </div>
             <div class="work-card-body">
+              <h3 class="work-card-title">Redesigning Circle K's Loyalty App Fixing Accessibility and Usability</h3>
+              <p class="work-card-desc">Simplified navigation and reduced friction across the loyalty flow.</p>
               <div class="work-card-tags">
-              <h3 class="work-card-title">Redesign Circle K's Loyalty App to Reduce User Drop-off</h3>
-              <p class="work-card-desc">Simplified navigation and reduced friction across the loyalty flow to lift retention and daily active use.</p>
                 <span class="work-tag work-tag-type">Mobile App</span>
                 <span class="work-tag work-tag-type">Personal Project</span>
-                <span class="work-tag work-tag-type">2023</span>
               </div>
             </div>
           </a>
@@ -131,9 +195,9 @@
               <span class="work-card-soon">Coming soon</span>
             </div>
             <div class="work-card-body">
-              <div class="work-card-tags">
               <h3 class="work-card-title">A Recycling Competition App to Build Employee Engagement</h3>
               <p class="work-card-desc">Designed a gamified recycling app from scratch to drive sustainability habits inside the workplace.</p>
+              <div class="work-card-tags">
                 <span class="work-tag work-tag-type">Mobile App</span>
                 <span class="work-tag work-tag-type">2022</span>
               </div>
@@ -146,40 +210,75 @@
 
     </section>
 
+    <!-- Work Experience -->
+    <section class="works-section" aria-label="Work experience">
+
+      <div class="works-inner">
+
+        <!-- Header -->
+        <div class="works-header">
+          <h2 class="case-studies-heading">Work experiences</h2>
+        </div>
+
+        <div class="work-exp-list">
+          <div class="work-exp-item">
+            <h3 class="work-exp-title">Product Designer @ Secomus Technology</h3>
+            <span class="work-exp-date">Sep 2023 – May 2026</span>
+          </div>
+          <div class="work-exp-item">
+            <h3 class="work-exp-title">UI/UX Designer @ FPT Telecom</h3>
+            <span class="work-exp-date">Mar 2022 – May 2023</span>
+          </div>
+          <div class="work-exp-item">
+            <h3 class="work-exp-title">Graphic Designer @ Danson Group &amp; Minh Ha Company</h3>
+            <span class="work-exp-date">2018 – 2021</span>
+          </div>
+        </div>
+
+        <a href="work-exp.html" class="work-exp-detail-btn">View detail</a>
+
+      </div><!-- /works-inner -->
+
+    </section>
+
+    <!-- What I've been making -->
+    <section class="works-section" aria-label="What I've been making">
+      <div class="works-inner">
+
+        <!-- Header -->
+        <div class="works-header">
+          <h2 class="case-studies-heading">My side quests</h2>
+        </div>
+
+        <div class="home-carousel-wrapper" id="home-carousel-wrapper">
+          <div class="home-carousel-track" id="home-carousel-track">
+            <div class="home-carousel-item">
+              <img src="Elements/work slider home/Bài viết.png" alt="" loading="lazy" />
+            </div>
+            <div class="home-carousel-item">
+              <img src="Elements/work slider home/Bảo hiểm 3.jpg" alt="" loading="lazy" />
+            </div>
+            <div class="home-carousel-item">
+              <img src="Elements/work slider home/ck-club-main.png" alt="" loading="lazy" />
+            </div>
+            <div class="home-carousel-item">
+              <img src="Elements/work slider home/lai-overview.png" alt="" loading="lazy" />
+            </div>
+            <div class="home-carousel-item">
+              <img src="Elements/work slider home/lai-reduce-interaction.png" alt="" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /works-inner -->
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <span>
-      Made with Nora and my friend, Claude
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent)" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-      </svg>
-    </span>
-  </footer>
+  <site-footer></site-footer>
 
   <div id="cursor-badge" aria-hidden="true">View project</div>
 
   <script>
-    // ── Filter pills ──
-    (function () {
-      const pills = document.querySelectorAll('.filter-pill');
-      const cards = document.querySelectorAll('.work-card');
-
-      pills.forEach(pill => {
-        pill.addEventListener('click', () => {
-          pills.forEach(p => p.classList.remove('active'));
-          pill.classList.add('active');
-
-          const filter = pill.dataset.filter;
-          cards.forEach(card => {
-            const cats = card.dataset.category || '';
-            const show = filter === 'all' || cats.split(' ').includes(filter);
-            card.classList.toggle('hidden', !show);
-          });
-        });
-      });
-    })();
-
     // ── Cursor badge (now just for the CK Club card) ──
     const badge = document.getElementById('cursor-badge');
 
@@ -199,6 +298,9 @@
     });
 
   </script>
+
+  <script src="js/home-carousel.js"></script>
+  <script src="js/footer.js" defer></script>
 
 </body>
 </html>
