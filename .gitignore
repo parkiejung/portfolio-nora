@@ -1,0 +1,10 @@
+# Local-only folders, not part of the published site
+.claude/
+_to_delete/
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Personal working files, not part of the published site
+Claude outputs/

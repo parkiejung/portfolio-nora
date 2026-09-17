@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CK Club — Nora Nguyen</title>
+  <meta name="project-thumbnail" content="Elements/ck-club-main.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=La+Belle+Aurore&family=Lora:ital,wght@0,400;0,600;1,400&family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet" />
@@ -300,24 +301,7 @@
       <!-- Next Project -->
       <section id="next-project" class="case-section">
         <div class="section-label">Next Project</div>
-        <div class="next-project-grid">
-          <a href="lai.html" class="next-project-card">
-            <div class="next-project-img">
-              <img src="Elements/lai-main.png"
-                   alt="Fixing App Usability Problems to Improve Completion Rate"
-                   loading="lazy" />
-            </div>
-            <div class="next-project-name">Fixing App Usability Problems to Improve Completion Rate</div>
-          </a>
-          <a href="index.html" class="next-project-card">
-            <div class="next-project-img">
-              <img src="Elements/diem.jpg"
-                   alt="A Recycling Competition App to Build Employee Engagement"
-                   loading="lazy" />
-            </div>
-            <div class="next-project-name">A Recycling Competition App to Build Employee Engagement</div>
-          </a>
-        </div>
+        <div class="next-project-grid" id="next-project-slot"></div>
       </section>
 
     </main>
@@ -402,6 +386,9 @@
       });
     });
   </script>
+
+  <script src="js/projects-data.js"></script>
+  <script src="js/next-project.js" defer></script>
 
   <script src="js/footer.js" defer></script>
 
