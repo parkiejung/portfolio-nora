@@ -729,6 +729,15 @@ body.page-home .card-left-icon {
   height: 20px;
   margin-bottom: 10px;
   flex-shrink: 0;
+  background-color: var(--accent);
+  -webkit-mask-image: url('data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cpath%20d%3D%22M13.4999%205.5C14.5899%205.5%2015.4999%204.58%2015.4999%203.5C15.4999%202.96957%2015.2892%202.46086%2014.9141%202.08579C14.539%201.71071%2014.0303%201.5%2013.4999%201.5C12.3899%201.5%2011.4999%202.38%2011.4999%203.5C11.4999%204.58%2012.3899%205.5%2013.4999%205.5ZM9.88989%2019.38L10.8899%2015L12.9999%2017V23H14.9999V15.5L12.8899%2013.5L13.4999%2010.5C14.1851%2011.2851%2015.0305%2011.9145%2015.9791%2012.3457C16.9278%2012.7769%2017.9578%2013%2018.9999%2013V11C17.0899%2011%2015.4999%2010%2014.6899%208.58L13.6899%207C13.2899%206.38%2012.6899%206%2011.9999%206C11.6899%206%2011.4999%206.08%2011.1899%206.08L5.99989%208.28V13H7.99989V9.58L9.78989%208.88L8.18989%2017L3.28989%2016L2.88989%2018L9.88989%2019.38Z%22%20fill%3D%22%230354D7%22/%3E%0A%3C/svg%3E%0A');
+  mask-image: url('data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cpath%20d%3D%22M13.4999%205.5C14.5899%205.5%2015.4999%204.58%2015.4999%203.5C15.4999%202.96957%2015.2892%202.46086%2014.9141%202.08579C14.539%201.71071%2014.0303%201.5%2013.4999%201.5C12.3899%201.5%2011.4999%202.38%2011.4999%203.5C11.4999%204.58%2012.3899%205.5%2013.4999%205.5ZM9.88989%2019.38L10.8899%2015L12.9999%2017V23H14.9999V15.5L12.8899%2013.5L13.4999%2010.5C14.1851%2011.2851%2015.0305%2011.9145%2015.9791%2012.3457C16.9278%2012.7769%2017.9578%2013%2018.9999%2013V11C17.0899%2011%2015.4999%2010%2014.6899%208.58L13.6899%207C13.2899%206.38%2012.6899%206%2011.9999%206C11.6899%206%2011.4999%206.08%2011.1899%206.08L5.99989%208.28V13H7.99989V9.58L9.78989%208.88L8.18989%2017L3.28989%2016L2.88989%2018L9.88989%2019.38Z%22%20fill%3D%22%230354D7%22/%3E%0A%3C/svg%3E%0A');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
 
 body.page-home .card-left-header {
@@ -1122,35 +1131,50 @@ body.page-home .side-quest-grid {
 }
 
 body.page-home .side-quest-card {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  aspect-ratio: 16 / 10;
   background: rgba(255,255,255,0.8);
-  border: 1px solid rgba(0,0,0,0.07);
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1),
-              box-shadow 0.3s cubic-bezier(0.16,1,0.3,1);
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
-body.page-home .side-quest-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 24px 64px rgba(0,0,0,0.12);
+body.page-home .side-quest-card-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(20,20,40,0.72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+body.page-home .side-quest-card-play::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 8px 0 8px 13px;
+  border-color: transparent transparent transparent #fff;
 }
 
 body.page-home .side-quest-card-soon {
   opacity: 0.65;
 }
 
-body.page-home .side-quest-card-soon:hover {
-  transform: none;
-  box-shadow: none;
-}
-
 body.page-home .side-quest-card-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 100%;
   overflow: hidden;
-  position: relative;
 }
 
 body.page-home .side-quest-card-img img {
@@ -1158,11 +1182,29 @@ body.page-home .side-quest-card-img img {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.45s cubic-bezier(0.16,1,0.3,1);
 }
 
-body.page-home .side-quest-card:hover .side-quest-card-img img {
-  transform: scale(1.04);
+/* Image pans/zooms out slightly on hover */
+body.page-home .side-quest-card-img-zoom img {
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+
+body.page-home .side-quest-card:hover .side-quest-card-img-zoom img,
+body.page-home .side-quest-card:focus-within .side-quest-card-img-zoom img {
+  transform: scale(1.08);
+}
+
+/* Tall screenshot that pans from top to bottom on hover ("hover-to-scroll") */
+body.page-home .side-quest-card-scrollshot {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+}
+
+body.page-home .side-quest-card:hover .side-quest-card-scrollshot,
+body.page-home .side-quest-card:focus-within .side-quest-card-scrollshot {
+  background-position: bottom center;
+  transition: background-position 6s linear;
 }
 
 body.page-home .side-quest-card-img-empty {
@@ -1185,10 +1227,22 @@ body.page-home .side-quest-card-soon-badge {
 }
 
 body.page-home .side-quest-card-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 16px 18px 18px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  background: var(--bg);
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.16,1,0.3,1);
+}
+
+body.page-home .side-quest-card:hover .side-quest-card-body,
+body.page-home .side-quest-card:focus-within .side-quest-card-body {
+  transform: translateY(0);
 }
 
 body.page-home .side-quest-card-meta {
@@ -1208,17 +1262,9 @@ body.page-home .side-quest-card-name {
   color: var(--ink);
 }
 
-body.page-home .side-quest-card-icon {
-  width: 8px;
-  height: 8px;
-  border-radius: 2px;
-  background: var(--accent);
-  flex-shrink: 0;
-}
-
 body.page-home .side-quest-card-year {
   font-size: 12px;
-  color: var(--accent-dark);
+  color: var(--ink);
 }
 
 body.page-home .side-quest-card-desc {

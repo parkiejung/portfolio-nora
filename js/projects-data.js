@@ -25,6 +25,6 @@ window.SITE_PROJECTS = [
   {
     file: 'gogreen.html',
     title: 'Create an app for internal activity Trash sorting',
-    thumbnail: 'Elements/trash/0.jpg',
+    thumbnail: 'Elements/gogreen.jpg',
   },
 ];
