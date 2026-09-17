@@ -400,7 +400,7 @@ body.page-lai .section-heading {
   height: 24px;
   flex-shrink: 0;
   color: #C9C9C9;
-  transition: transform 0.3s ease, color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .method-item:hover .method-icon,
@@ -408,8 +408,16 @@ body.page-lai .section-heading {
   color: #7E80F6;
 }
 
-.method-item.expanded .method-icon {
+/* Plus → minus morph (same transition as the FAQ icon on the home page):
+   the horizontal bar stays put, the vertical bar rotates flat and fades. */
+.method-item .method-icon-bar-v {
+  transform-origin: 12px 12px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.method-item.expanded .method-icon-bar-v {
   transform: rotate(90deg);
+  opacity: 0;
 }
 
 .method-item .method-desc {
