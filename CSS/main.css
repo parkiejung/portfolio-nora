@@ -1024,9 +1024,9 @@ body.page-home .work-card[aria-disabled="true"]:hover {
 }
 
 body.page-home .work-card-img {
-  width: 300px;
+  width: 380px;
   flex-shrink: 0;
-  aspect-ratio: 16 / 12;
+  aspect-ratio: 16 / 11;
   overflow: hidden;
   position: relative;
 }
