@@ -44,7 +44,7 @@ class SiteFooter extends HTMLElement {
               <span class="footer-label">Explore more</span>
               <nav class="footer-links" aria-label="Social links">
                 <a href="https://www.linkedin.com/in/parkjungnga/" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://www.behance.net/parkjungnga" target="_blank" rel="noopener">Behance</a>
+                <a href="https://dribbble.com/parkjungnga" target="_blank" rel="noopener">Dribbble</a>
               </nav>
             </div>
           </div>
