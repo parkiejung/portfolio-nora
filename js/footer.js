@@ -60,7 +60,7 @@ class SiteFooter extends HTMLElement {
     const textEl = this.querySelector('.footer-type-text');
     if (!textEl) return;
 
-    const words = ['opportunity', 'design chat', 'hangout', 'hello'];
+    const words = ['opportunity', 'design chat', 'hangout', 'xin chào - saying hi!'];
     let index = 0;
 
     const TYPE_SPEED = 80;    // ms per character, typing in
