@@ -17,74 +17,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=La+Belle+Aurore&family=Lora:ital,wght@0,400;0,600;1,400&family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="CSS/main.css" />
-  <style>
-    body.page-home .work-exp-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    body.page-home .work-exp-item {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 8px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    body.page-home .work-exp-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    body.page-home .work-exp-title {
-      font-family: var(--font-heading);
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--ink);
-      line-height: 1.35;
-    }
-
-    body.page-home .work-exp-date {
-      font-family: var(--font-body);
-      font-size: 13px;
-      color: var(--accent);
-      white-space: nowrap;
-    }
-
-    @media (max-width: 640px) {
-      body.page-home .work-exp-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-      }
-    }
-
-    body.page-home .work-exp-detail-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-body);
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--accent);
-      background: #fff;
-      border: 1px solid var(--border);
-      padding: 10px 20px;
-      border-radius: 999px;
-      text-decoration: none;
-      margin-top: 32px;
-      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-    }
-
-    body.page-home .work-exp-detail-btn:hover {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
-  </style>
 </head>
 <body class="page-home" id="top">
 
@@ -148,6 +80,89 @@
 
     </section>
 
+
+    <!-- What I've been making -->
+    <section class="works-section" aria-label="What I've been making">
+      <div class="works-inner">
+
+        <!-- Header -->
+        <div class="works-header">
+          <h2 class="case-studies-heading">Design projects</h2>
+        </div>
+
+        <div class="side-quest-grid">
+          <div class="side-quest-card">
+            <div class="side-quest-card-img side-quest-card-scrollshot" role="img" aria-label="Flicky landing page design" style="background-image: url('Elements/flickywebsite.jpg');"></div>
+            <div class="side-quest-card-body">
+              <div class="side-quest-card-meta">
+                <span class="side-quest-card-name">
+                  Flicky Landingpage
+                </span>
+                <span class="side-quest-card-year">2026</span>
+              </div>
+              <p class="side-quest-card-desc">Landing page for Flicky apps</p>
+              <a class="side-quest-card-behance-btn" href="https://dribbble.com/shots/27814591-Landing-page-for-apps" target="_blank" rel="noopener">
+                <span data-btn-label>View on Dribbble</span>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="side-quest-card">
+            <div class="side-quest-card-img side-quest-card-scrollshot" role="img" aria-label="Deco landing page redesign" style="background-image: url('Elements/decowebsite.png');"></div>
+            <div class="side-quest-card-body">
+              <div class="side-quest-card-meta">
+                <span class="side-quest-card-name">
+                  Deco landing page
+                </span>
+                <span class="side-quest-card-year">2025</span>
+              </div>
+              <p class="side-quest-card-desc">Redesign a landing page for the app DECO</p>
+              <div style="align-items: baseline; ">
+              <a class="side-quest-card-behance-btn" href="https://deco-website.framer.website/" target="_blank" rel="noopener" style="padding-right: 20px;">
+                <span data-btn-label>View live demo</span>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a class="side-quest-card-behance-btn" href="https://dribbble.com/shots/27815319-Landingpage-for-app-DECO" target="_blank" rel="noopener">
+                <span data-btn-label>View on Dribbble</span>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="side-quest-card">
+            <div class="side-quest-card-img">
+          <a href="gogreen.html" class="side-quest-card-behance-btn" target="_blank" rel="noopener">
+              <img src="Elements/gogreen.jpg" alt="Trash sorting app — internal activity" loading="lazy" />
+                <span class="side-quest-card-play" aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="side-quest-card-body">
+              <div class="side-quest-card-meta">
+                <span class="side-quest-card-name">
+                  Go Green App
+                </span>
+                <span class="side-quest-card-year">2022</span>
+              </div>
+              <p class="side-quest-card-desc">I created an app as a bonding activity among employees to raise awareness about recycling.</p>
+              <a class="side-quest-card-behance-btn" href="gogreen.html">
+                <span data-btn-label>Read project</span>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="side-quest-more">
+            <a href="https://dribbble.com/parkjungnga" target="_blank" rel="noopener" class="work-exp-detail-btn" style="box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);">More design works on Dribbble </a>
+          </div>
+        </div>
+
+
+      </div><!-- /works-inner -->
+    </section>
+
     <!-- Selected Work -->
     <section class="works-section" aria-label="Selected work">
 
@@ -196,111 +211,27 @@
           </a>
 
 
-          <!-- Go Green -->
-          <a href="gogreen.html" class="work-card" data-category="internal tool">
+          <!-- DataIQ -->
+          <a href="https://youtu.be/5j2MabrLKqI" class="work-card" data-category="internal tool">
             <div class="work-card-img">
-              <img src="Elements/gogreen.jpg"
-                   alt="Trash sorting app — internal activity"
-                   loading="lazy" />
+            <img src="https://img.youtube.com/vi/5j2MabrLKqI/hqdefault.jpg" alt="DataIQ project video" loading="lazy" />
             </div>
             <div class="work-card-body">
-              <h3 class="work-card-title">Create an app for internal activity Trash sorting</h3>
-              <p class="work-card-desc">I created an app as an bonding activity among employees to raise awareness about recycling.</p>
+              <h3 class="work-card-title">DataIQ</h3>
+              <p class="work-card-desc">Final project for class Breaking into Product Management, an AI platform for Shopee sellers forecasting inventory stocking.</p>
               <div class="work-card-tags">
-                <span class="work-tag work-tag-type">Internal Tool</span>
-                <span class="work-tag work-tag-type">Employee Engagement</span>
+                <span class="work-tag work-tag-type">Course project</span>
+                <span class="work-tag work-tag-type">Management System
+                </span>
               </div>
             </div>
           </a>
-
 
         </div><!-- /works-grid -->
 
       </div><!-- /works-inner -->
 
-    </section>
-
-    <!-- What I've been making -->
-    <section class="works-section" aria-label="What I've been making">
-      <div class="works-inner">
-
-        <!-- Header -->
-        <div class="works-header">
-          <h2 class="case-studies-heading">Other projects</h2>
-        </div>
-
-        <div class="side-quest-grid">
-          <div class="side-quest-card">
-            <div class="side-quest-card-img side-quest-card-scrollshot" role="img" aria-label="Flicky landing page design" style="background-image: url('Elements/flickywebsite.jpg');"></div>
-            <div class="side-quest-card-body">
-              <div class="side-quest-card-meta">
-                <span class="side-quest-card-name">
-                  Flicky Landingpage
-                </span>
-                <span class="side-quest-card-year">2026</span>
-              </div>
-              <p class="side-quest-card-desc">Landing page for Flicky apps</p>
-              <a class="side-quest-card-behance-btn" href="https://dribbble.com/shots/27814591-Landing-page-for-apps" target="_blank" rel="noopener">
-                <span data-btn-label>View on Dribbble</span>
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <div class="side-quest-card">
-            <div class="side-quest-card-img side-quest-card-scrollshot" role="img" aria-label="Deco landing page redesign" style="background-image: url('Elements/decowebsite.png');"></div>
-            <div class="side-quest-card-body">
-              <div class="side-quest-card-meta">
-                <span class="side-quest-card-name">
-                  Deco landing page
-                </span>
-                <span class="side-quest-card-year">2025</span>
-              </div>
-              <p class="side-quest-card-desc">Redesign a landing page for the app DECO</p>
-              <div style="align-items: baseline; ">
-              <a class="side-quest-card-behance-btn" href="https://deco-website.framer.website/" target="_blank" rel="noopener" style="padding-right: 20px;">
-                <span data-btn-label>View live demo</span>
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-              <a class="side-quest-card-behance-btn" href="https://dribbble.com/shots/27815319-Landingpage-for-app-DECO" target="_blank" rel="noopener">
-                <span data-btn-label>View on Dribbble</span>
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="side-quest-card">
-            <div class="side-quest-card-img">
-              <a class="side-quest-card-img-link" href="https://youtu.be/5j2MabrLKqI" target="_blank" rel="noopener" aria-label="Watch DataIQ project video">
-                <img src="https://img.youtube.com/vi/5j2MabrLKqI/hqdefault.jpg" alt="DataIQ project video" loading="lazy" />
-                <span class="side-quest-card-play" aria-hidden="true"></span>
-              </a>
-            </div>
-            <div class="side-quest-card-body">
-              <div class="side-quest-card-meta">
-                <span class="side-quest-card-name">
-                  DataIQ
-                </span>
-                <span class="side-quest-card-year">2026</span>
-              </div>
-              <p class="side-quest-card-desc">Final project for class Breaking into Product Management, an AI platform for Shopee sellers forecasting inventory stocking.</p>
-              <a class="side-quest-card-behance-btn" href="https://youtu.be/5j2MabrLKqI" target="_blank" rel="noopener">
-                <span data-btn-label>View project record</span>
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <div class="side-quest-more">
-            <a href="https://dribbble.com/parkjungnga" target="_blank" rel="noopener" class="work-exp-detail-btn">View more design works on Dribbble</a>
-          </div>
-        </div>
-
-
-      </div><!-- /works-inner -->
-    </section>
+    </section>    
 
     <!-- Work Experience -->
     <section class="works-section" aria-label="Work experience">
