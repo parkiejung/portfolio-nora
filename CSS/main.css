@@ -1123,7 +1123,28 @@ body.page-home .side-quest-grid {
 
 body.page-home .side-quest-more {
   display: flex;
+  align-items: center;
   justify-content: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: rgb(236, 232, 232);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+/* Background image at 50% opacity, behind the button */
+body.page-home .side-quest-more::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url('../Elements/bgprj.png') center / cover no-repeat;
+  opacity: 0.2;
+}
+
+body.page-home .side-quest-more .work-exp-detail-btn {
+  margin-top: 0;
 }
 
 body.page-home .side-quest-card {
