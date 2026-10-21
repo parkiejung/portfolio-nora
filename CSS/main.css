@@ -7,7 +7,6 @@
   --accent:        #3757CC;
   --accent-dark:   #515A7E;
   --ink:           #2741A9;  /* same blue family as --accent, deeper — headings/body text */
-  --muted:         #636485;  
   --border:        #D4D5E0;
   --border-card:   #C7CBDA;
   --bg:            #F2F0F0;
@@ -19,7 +18,7 @@
   --z-cursor: 200;
 
   /* Font stacks */
-  --font-heading:   'Mozilla Headline', sans-serif;
+  --font-heading:   'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
   --font-body:      'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
   --font-signature: 'La Belle Aurore', cursive;
   --font-quote:     'Lora', Georgia, 'Times New Roman', serif;
@@ -61,7 +60,7 @@ nav {
   border-radius: 999px;
   padding: 12px 32px;
   display: flex;
-  font-family: Mozilla Headline;
+  font-family: var(--font-body);
   align-items: center;
   gap: 36px;
   box-shadow: 0 8px 65px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.85);
@@ -98,8 +97,7 @@ nav a.active {
 }
 
 /* ── Shared headings ── */
-.section-heading,
-.section-title {
+.section-heading {
   font-family: var(--font-heading);
   font-size: clamp(1.4rem, 2.5vw + 0.5rem, 2rem);
   font-weight: 400;
@@ -121,13 +119,6 @@ nav a.active {
 .section-body p + p { margin-top: 14px; }
 .section-body strong { color: var(--ink); font-weight: 500; }
 
-/* ── Divider ── */
-.section-divider {
-  height: 1px;
-  background: var(--border);
-  margin-bottom: 72px;
-}
-
 site-footer {
   display: block;
   width: 100%;
@@ -143,9 +134,9 @@ site-footer {
 }
 
 .footer-inner {
-  max-width: 820px;
+  max-width: 920px;
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
@@ -652,7 +643,7 @@ body.page-home {
 
 body.page-home main {
   width: 100%;
-  max-width: 820px;
+  max-width: 920px;
   padding: 0 48px;
   flex: 1 0 auto;
 }
@@ -724,11 +715,15 @@ body.page-home .card-left {
   overflow: hidden;
 }
 
+/* Inline SVG (in index.html) filled with currentColor, so it always
+   renders and follows --ink. */
 body.page-home .card-left-icon {
+  display: block;
   width: 20px;
   height: 20px;
   margin-bottom: 10px;
   flex-shrink: 0;
+  color: var(--ink);
 }
 
 body.page-home .card-left-header {
@@ -850,7 +845,7 @@ body.page-home .text-block {
 }
 
 body.page-home .text-block h1 {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: 24pt;
   font-weight: 400;
   line-height: 1.5;
@@ -911,19 +906,6 @@ body.page-home .works-section .section-label {
   font-size: 11px;
 }
 
-body.page-home .label-square {
-  width: 8px;
-  height: 8px;
-  background: var(--accent);
-  border-radius: 2px;
-  flex-shrink: 0;
-}
-
-body.page-home .section-title {
-  text-align: left;
-  margin-bottom: 48px;
-}
-
 /* Mobile */
 @media (max-width: 640px) {
   body.page-home { padding: 20px 0; }
@@ -946,22 +928,14 @@ body.page-home .section-title {
 
 /* ── Works section inner container ── */
 body.page-home .works-inner {
-  padding: 30px 48px 30px;
-  max-width: 820px;
+  padding: 30px 0 30px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
 body.page-home .works-header {
   margin-bottom: 20px;
   text-align: left;
-}
-
-body.page-home .case-studies-sub {
-  font-size: 14px;
-  font-weight: regular;
-  color: var(--accent);
-  margin-bottom: 12px;
-  margin-top: 12px;
 }
 
 body.page-home .case-studies-heading {
@@ -981,27 +955,47 @@ body.page-home .case-studies-heading em {
 /* ── Works grid ── */
 body.page-home .works-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 /* ── Work card ── */
 body.page-home .work-card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background: rgba(255,255,255,0.8);
   border: 1px solid rgba(0,0,0,0.07);
   border-radius: 16px;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1),
-              box-shadow 0.3s cubic-bezier(0.16,1,0.3,1);
 }
 
-body.page-home .work-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 24px 64px rgba(0,0,0,0.12);
+/* Appear animation (JS adds .is-visible). */
+@keyframes work-card-rise {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (scripting: enabled) {
+  body.page-home .work-card { opacity: 0; }
+
+  body.page-home .work-card.is-visible {
+    opacity: 1;
+    animation: work-card-rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  }
+
+  /* Stagger across the 3 columns */
+  body.page-home .work-card:nth-child(3n+2).is-visible { animation-delay: 0.1s; }
+  body.page-home .work-card:nth-child(3n+3).is-visible { animation-delay: 0.2s; }
+}
+
+@media (max-width: 768px) {
+  body.page-home .work-card.is-visible { animation-delay: 0s !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-home .work-card.is-visible { animation: none; }
 }
 
 body.page-home .work-card[aria-disabled="true"] {
@@ -1081,9 +1075,9 @@ body.page-home .work-card[aria-disabled="true"]:hover {
 }
 
 body.page-home .work-card-img {
-  width: 300px;
+  width: 100%;
   flex-shrink: 0;
-  aspect-ratio: 16 / 12;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   position: relative;
 }
@@ -1100,26 +1094,9 @@ body.page-home .work-card:hover .work-card-img img {
   transform: scale(1.04);
 }
 
-/* Coming soon overlay */
-body.page-home .work-card-soon {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  background: rgba(20,20,40,0.72);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: rgba(255,255,255,0.75);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.15);
-}
-
 body.page-home .work-card-body {
-  padding: 22px 24px 24px;
+  flex: 1;
+  padding: 18px 18px 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1142,11 +1119,6 @@ body.page-home .work-tag {
   border-radius: 999px;
 }
 
-body.page-home .work-tag-cat {
-  background: rgba(55, 87, 204, 0.2);
-  color: var(--accent);
-}
-
 body.page-home .work-tag-type {
   background: rgba(59, 124, 253, 0.06);
   color: var(--accent);
@@ -1154,7 +1126,7 @@ body.page-home .work-tag-type {
 
 body.page-home .work-card-title {
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--ink);
   line-height: 1.35;
@@ -1165,11 +1137,6 @@ body.page-home .work-card-desc {
   font-size: 14px;
   color: var(--ink);
   line-height: 1.65;
-}
-
-/* Filter hidden state */
-body.page-home .work-card.hidden {
-  display: none;
 }
 
 @media (max-width: 768px) {
@@ -1187,32 +1154,6 @@ body.page-home .side-quest-grid {
   margin-top: 20px;
 }
 
-body.page-home .side-quest-more {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  background: rgb(236, 232, 232);
-  border-radius: 16px;
-  padding: 24px;
-}
-
-/* Background image at 50% opacity, behind the button */
-body.page-home .side-quest-more::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: url('../Elements/bgprj.png') center / cover no-repeat;
-  opacity: 0.2;
-}
-
-body.page-home .side-quest-more .work-exp-detail-btn {
-  margin-top: 0;
-}
-
 body.page-home .side-quest-card {
   display: flex;
   flex-direction: column;
@@ -1222,8 +1163,31 @@ body.page-home .side-quest-card {
   overflow: hidden;
 }
 
-body.page-home .side-quest-card-soon {
-  opacity: 0.65;
+/* Appear animation: only when JS is on, so no-JS visitors still see cards. */
+@media (scripting: enabled) {
+  body.page-home .side-quest-card {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  body.page-home .side-quest-card.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Stagger the right-hand card of each row slightly */
+  body.page-home .side-quest-card:nth-child(even) {
+    transition-delay: 0.12s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-home .side-quest-card {
+    transform: none;
+    transition: opacity 0.3s ease;
+  }
 }
 
 body.page-home .side-quest-card-img {
@@ -1233,50 +1197,12 @@ body.page-home .side-quest-card-img {
   position: relative;
 }
 
+body.page-home .side-quest-card-img video,
 body.page-home .side-quest-card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-/* Long website screenshots: fit card width, show the top of the page */
-body.page-home .side-quest-card-scrollshot {
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: top center;
-  transition: background-position 0.8s ease-out;
-}
-
-/* Hover: slowly scroll down the full page, snap back on leave */
-body.page-home .side-quest-card:hover .side-quest-card-scrollshot {
-  background-position: bottom center;
-  transition: background-position 12s linear;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  body.page-home .side-quest-card:hover .side-quest-card-scrollshot {
-    background-position: top center;
-  }
-}
-
-body.page-home .side-quest-card-img-empty {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent-subtle);
-}
-
-body.page-home .side-quest-card-soon-badge {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  background: rgba(255,255,255,0.85);
-  padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(0,0,0,0.07);
 }
 
 body.page-home .side-quest-card-body {
@@ -1285,12 +1211,6 @@ body.page-home .side-quest-card-body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-body.page-home .side-quest-card-img-link {
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 
 body.page-home .side-quest-card-behance-btn {
@@ -1350,14 +1270,6 @@ body.page-home .side-quest-card-name {
   font-size: 14px;
   font-weight: 500;
   color: var(--ink);
-}
-
-body.page-home .side-quest-card-icon {
-  width: 8px;
-  height: 8px;
-  border-radius: 2px;
-  background: var(--accent);
-  flex-shrink: 0;
 }
 
 body.page-home .side-quest-card-year {
