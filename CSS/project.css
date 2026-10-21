@@ -38,11 +38,10 @@
 
 .top-bar.scrolled .nav-label { display: none; }
 .top-bar.scrolled .nav-icon  { display: block; }
-.top-bar.scrolled .nav-works { display: none; }
 
 /* ── Page shell ── */
 .page-layout {
-  max-width: 1080px;
+  max-width: 920px;
   margin: 92px auto 0;
   padding: 0 32px 40px;
   display: grid;
@@ -51,25 +50,17 @@
   align-items: start;
 }
 
-/* Align the footer's inner content with .page-layout's own CONTENT
-   column (600px, same as .content below) — not the sidebar — so the
-   footer text starts where the case study text starts, not where the
-   left-hand menu starts. 232px = sidebar (160px) + grid gap (72px);
-   264px is that same offset measured from the page edge (32px page
-   padding + 232px). Below 900px .page-layout collapses to a single
-   column (sidebar stacks above content, no more offset), so the
-   footer reverts to matching .page-layout's own edge there, same as
-   before. */
+/* Footer spans the same 920px as .page-layout, with the same 32px side
+   padding, so its edges line up with the page content. */
 .page-layout + site-footer .footer-inner {
-  max-width: 600px;
-  margin-left: max(264px, calc(50% - 276px));
-  margin-right: 0;
-  padding: 0;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 32px;
 }
 
 @media (max-width: 900px) {
   .page-layout + site-footer .footer-inner {
-    max-width: 1080px;
+    max-width: 920px;
     margin-left: auto;
     padding: 0 24px;
   }
@@ -478,6 +469,10 @@ body.page-lai .section-heading {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+  font-weight: 500;
 }
 
 .callout-icon {
@@ -485,26 +480,6 @@ body.page-lai .section-heading {
   height: 24px;
   flex-shrink: 0;
   color: #7E80F6;
-}
-
-.callout {
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--ink);
-  font-weight: 500;
-}
-
-/* ── Quote ── */
-.quote {
-  color: var(--ink);
-  font-size: 14pt;
-  font-family: var(--font-heading);
-  font-weight: 400;
-  margin-top: 12px;
-  margin-left: 40px;
-  margin-right: 40px;
-  font-style: italic;
-  line-height: 1.5;
 }
 
 /* ── Process Flow Diagram ── */
@@ -564,7 +539,6 @@ body.page-lai .section-heading {
   justify-content: center;
   font-weight: 600;
   color: #7E80F6;
-  font-size: 18px;
   flex-shrink: 0;
   font-size: 0;
 }
