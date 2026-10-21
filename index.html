@@ -15,7 +15,7 @@
   <title>Nora Nguyen, Product Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=La+Belle+Aurore&family=Lora:ital,wght@0,400;0,600;1,400&family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=La+Belle+Aurore&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="CSS/main.css" />
 </head>
 <body class="page-home" id="top">
@@ -33,11 +33,11 @@
 
         <!-- Left: plain white card -->
         <div class="card card-left" aria-hidden="true">
-          <div class="card-left-icon" aria-hidden="true"></div>
+          <svg class="card-left-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.4999 5.5C14.5899 5.5 15.4999 4.58 15.4999 3.5C15.4999 2.96957 15.2892 2.46086 14.9141 2.08579C14.539 1.71071 14.0303 1.5 13.4999 1.5C12.3899 1.5 11.4999 2.38 11.4999 3.5C11.4999 4.58 12.3899 5.5 13.4999 5.5ZM9.88989 19.38L10.8899 15L12.9999 17V23H14.9999V15.5L12.8899 13.5L13.4999 10.5C14.1851 11.2851 15.0305 11.9145 15.9791 12.3457C16.9278 12.7769 17.9578 13 18.9999 13V11C17.0899 11 15.4999 10 14.6899 8.58L13.6899 7C13.2899 6.38 12.6899 6 11.9999 6C11.6899 6 11.4999 6.08 11.1899 6.08L5.99989 8.28V13H7.99989V9.58L9.78989 8.88L8.18989 17L3.28989 16L2.88989 18L9.88989 19.38Z"/></svg>
           <div class="card-left-header">ON MY MIND NOW</div>
           <ul class="card-left-list">
-            <li>Personal projects</li>
-            <li>Support a Shopify App Developer</li>
+            <li>Find a full-time job</li>
+            <li>Practice calligraphy everyday</li>
           </ul>
         </div>
 
@@ -92,7 +92,9 @@
 
         <div class="side-quest-grid">
           <div class="side-quest-card">
-            <div class="side-quest-card-img side-quest-card-scrollshot" role="img" aria-label="Flicky landing page design" style="background-image: url('Elements/flickywebsite.jpg');"></div>
+            <div class="side-quest-card-img">
+              <video src="Elements/flicky-landing-small.mp4" muted loop playsinline preload="metadata" aria-label="Flicky landing page design"></video>
+            </div>
             <div class="side-quest-card-body">
               <div class="side-quest-card-meta">
                 <span class="side-quest-card-name">
@@ -109,7 +111,9 @@
           </div>
 
           <div class="side-quest-card">
-            <div class="side-quest-card-img side-quest-card-scrollshot" role="img" aria-label="Deco landing page redesign" style="background-image: url('Elements/decowebsite.png');"></div>
+            <div class="side-quest-card-img">
+              <video src="Elements/deco-framersite-small.mp4" muted loop playsinline preload="metadata" aria-label="Deco landing page redesign"></video>
+            </div>
             <div class="side-quest-card-body">
               <div class="side-quest-card-meta">
                 <span class="side-quest-card-name">
@@ -154,11 +158,29 @@
             </div>
           </div>
 
-          <div class="side-quest-more">
-            <a href="https://dribbble.com/parkjungnga" target="_blank" rel="noopener" class="work-exp-detail-btn" style="box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);">More design works on Dribbble </a>
+          <div class="side-quest-card">
+            <div class="side-quest-card-img">
+              <video src="Elements/seo-opt-small.mp4" muted loop playsinline preload="metadata" aria-label="SEO Report score interaction"></video>
+            </div>
+            <div class="side-quest-card-body">
+              <div class="side-quest-card-meta">
+                <span class="side-quest-card-name">
+                  SEO Report score interaction
+                </span>
+                <span class="side-quest-card-year">2025</span>
+              </div>
+              <p class="side-quest-card-desc">I designed the interaction of SEO Report page for a Shopify app</p>
+              <a class="side-quest-card-behance-btn" href="https://dribbble.com/shots/27827048-SEO-Report-page-for-Shopify-App" target="_blank" rel="noopener">
+                <span data-btn-label>View project</span>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
           </div>
         </div>
 
+        <div style="text-align: center;">
+          <a href="https://dribbble.com/parkjungnga" target="_blank" rel="noopener" class="work-exp-detail-btn">View more design works on Dribbble</a>
+        </div>
 
       </div><!-- /works-inner -->
     </section>
@@ -292,6 +314,7 @@
   </script>
 
   <script src="js/footer.js" defer></script>
+  <script src="js/side-quest-reveal.js" defer></script>
 
 </body>
 </html>
