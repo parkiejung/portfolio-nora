@@ -35,7 +35,7 @@
     .resume-main {
       max-width: 920px;
       margin: 0 auto;
-      padding: 140px 24px 100px;
+      padding: 48px 24px 100px;
     }
 
     .resume-header h1 {
@@ -46,13 +46,44 @@
       margin-bottom: 6px;
     }
 
+    /* Intro: name, role and summary on the left, tilted photo far right */
+    .resume-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      column-gap: 40px;
+      align-items: start;
+    }
+
     .resume-header-photo {
+      grid-column: 2;
+      grid-row: 1;
       height: 200px;
       width: auto;
       border-radius: 4px;
       object-fit: cover;
-      margin-bottom: 16px;
       display: block;
+      /* the 6deg tilt pushes the corner out ~10px; pull it back to the edge */
+      margin-right: 10px;
+      transform: rotate(6deg);
+      transform-origin: center;
+    }
+
+    @media (max-width: 640px) {
+      .resume-intro {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .resume-header-photo {
+        grid-column: 1;
+        grid-row: 1;
+        height: 160px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        transform: rotate(4deg);
+        transform-origin: left center;
+      }
+      .resume-intro-text {
+        grid-row: 2;
+      }
     }
 
     .resume-role {
@@ -445,23 +476,20 @@
 
   <main class="resume-main" aria-label="Work experience">
 
-    <header class="resume-header">
-      <img src="Elements/nora-wexp.png" alt="Thu Nga Nguyen (Nora)" class="resume-header-photo" />
-      <h1>Thu Nga Nguyen (Nora)</h1>
-      <p class="resume-role">Product Designer · Hanoi, Vietnam · 4 years in position</p>
-      <p class="resume-contact">
-        <a href="mailto:ntnga2112@gmail.com">ntnga2112@gmail.com</a>
-        <span aria-hidden="true">·</span>
-        <a href="https://www.linkedin.com/in/parkjungnga/" target="_blank" rel="noopener">LinkedIn</a>
-        <span aria-hidden="true">·</span>
-        <span class="status-dot" aria-hidden="true"></span> Open to full-time roles
-      </p>
-    </header>
+    <div class="resume-intro">
+      <img src="Elements/pic2.jpg" alt="Thu Nga Nguyen (Nora)" class="resume-header-photo" />
+      <div class="resume-intro-text">
+      <header class="resume-header">
+        <h1>Thu Nga Nguyen (Nora)</h1>
+        <p class="resume-role">Product Designer · Hanoi, Vietnam · 4 years in position</p>
+      </header>
 
-    <section class="resume-section" aria-labelledby="summary-heading">
-      <h2 id="summary-heading">Summary</h2>
-      <p>Product designer with 4 years of experience (previously 3 yoe in Graphic Design), mostly working on websites, SaaS tools and B2B systems. My focus is UX and usability, backed by hands-on design systems work. </p>
-    </section>
+      <section class="resume-section" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Summary</h2>
+        <p>Product designer with 4 years of experience (previously 3 yoe in Graphic Design), mostly working on websites, SaaS tools and B2B systems. My focus is UX and usability, backed by hands-on design systems work. </p>
+      </section>
+      </div>
+    </div>
 
     <section class="resume-section" aria-labelledby="experience-heading">
       <h2 id="experience-heading">Work Experience</h2>
